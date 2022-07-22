@@ -1,38 +1,141 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800&display=swap');
+
+* {
+  font-family: 'Cairo', sans-serif;
+
+}
+
+body {
+  /* background-color: #000 !important; */
+  /* height: 100vh; */
+  overflow: hidden;
+}
+
+/* ////////////////Navbar////////////////// */
+
+.navbar {
+  background-color: #000;
+}
+
+.navbar .container a {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.navbar .container a span {
+  color: rgb(192, 4, 4);
+}
+
+/* ////////////////Home////////////////// */
+.contentHome {
+  width: 100%;
+  height: 100vh;
+}
+
+.contentHome img {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  transition: .9s;
+  -webkit-transition: .9s;
+  -moz-transition: .9s;
+  -ms-transition: .9s;
+  -o-transition: .9s;
+  z-index: -1;
+}
+.contentHome .box::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .7;
+  display: none;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+.contentHome .box:hover::before{
+  display: block;
+}
+.contentHome .box{
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: .5s;
+  
+}
+.contentHome .box:hover img{
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+}
+.contentHome .box .text{
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  -moz-transform:translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%);
+  -o-transform:translate(-50%,-50%);
+  width: 100%;
   text-align: center;
+  display: none;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contentHome .box .text a{
+  text-decoration: none;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.contentHome .box .text h2{
+  font-weight: 800;
+  font-size: 5rem;
+  color: #fff;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+.contentHome .box .text h2:hover{
+  color: rgb(192, 4, 4);
+}
+.contentHome .box .text .stars i{
+  font-size: 2rem;
+  color: gold;
+  padding: 5px;
+}
+.contentHome .box:hover .text{
+  display: block;
+}
+@media (max-width:768px) {
+  .contentHome .box{
+    width: 100%;
+    height: 100%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .contentHome .box img{
+    height: 100vh;
   }
-  to {
-    transform: rotate(360deg);
+  .contentHome .box .text{
+    top: 50%;
+  }
+  .contentHome .box .text h2{
+    font-size: 2rem;
+  }
+  .contentHome .box .text .stars i{
+    font-size: 1.5rem;
   }
 }
