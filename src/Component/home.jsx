@@ -10,6 +10,7 @@ class Home extends Component {
     render() {
         return (
             <main className="contentHome">
+                
                 <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                     spaceBetween={0}

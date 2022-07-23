@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FirstPage from "./FristPage"
 class navbar extends Component {
     state = {};
     render() {

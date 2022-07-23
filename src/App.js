@@ -1,15 +1,16 @@
 import React, { Component } from "react";
+import { ReactDOM } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import "./App.css";
-import Navbar from "./Component/Navbar";
-import Home from "./Component/home";
+
+import FristPage from "./Component/FristPage";
+import Main from "./Component/MoviesLIst/Main"
+
 
 function App() {
   return (
     <>
-    <Navbar></Navbar>
-    <Home></Home>
+    <Main></Main>
     </>
   );
 }
